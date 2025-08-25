@@ -1,0 +1,192 @@
+@charset "UTF-8";
+
+@media (max-width: 600px) {
+
+    main {
+        margin-top: 160px;
+    }
+
+    .linksNav a {
+        font-size: 10px;
+        padding: 3px 6px;
+    }
+
+    #sloganMarca {
+        width: 100%;
+        height: auto;  
+        max-height: min(400px, 95vh);
+        object-fit: contain;
+    }
+
+    footer p {
+        font-size: 8px;
+        text-align: center;
+    }
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background-color: black;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: black;
+    box-sizing: border-box;
+    padding-bottom: 0;
+}
+
+nav hr:last-of-type {
+    margin-bottom: 0;
+}
+
+hr {
+    border: none;
+    height: 2px;
+    background-color: #911C3C;
+    margin: 7px auto;
+    width: 100%;
+}
+
+.logo {
+    text-align: center;
+}
+
+.logo a {
+    display: inline-block;
+}
+
+.logo img {
+    display: block;
+    max-width: 80px;
+    height: auto;
+}
+
+.linksNav {
+    display: flex;
+    justify-content: center; 
+    flex-wrap: nowrap;
+    gap: 10px;
+}
+
+.linksNav a {
+    color: #911C3C;
+    font-size: clamp(10px, 3vw, 14px);
+    padding: 5px 8px;
+    border-radius: 5px;
+    text-decoration: underline;
+    white-space: nowrap;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 100px;
+}
+
+#sloganMarca{
+    width: 100%;
+    max-width: 1580px;
+    height: 923px;
+    display: block;
+    margin: 0 auto 20px auto;
+}
+
+h4 {
+    font-family: monospace;
+    color: #911C3C;
+    font-size: clamp(16px, 2vw, 20px);
+    margin: 10px 0px 6px 5px;
+}
+p {
+    font-family: monospace;
+    color: #911C3C;
+    font-size: clamp(14px, 1.5vw, 18px);
+    margin-bottom: 15px;
+    margin-left: 5px;
+}
+
+.camisas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    gap: 2px; 
+    overflow: hidden;
+}
+
+.camisaItem {
+    text-align: left; 
+    transition: transform 0.6s ease;
+    position: relative;
+}
+
+.camisaItem img {
+    width: 100%; 
+    height: auto;
+    transition: transform 0.6s ease;
+    display: block;
+}
+
+.linkCamisa {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+.imagemPrincipal {
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: transform 0.6s ease;
+}
+
+.imagemHover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transform: scale(1);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.linkCamisa:hover .imagemHover {
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+.linkCamisa:hover .imagemPrincipal {
+    transform: scale(1.05);
+}
+
+footer hr {
+    border: none;
+    height: 2px;
+    background-color: #911C3C;
+    width: 100%;
+    margin: 5px 0;
+}
+
+footer {
+    color: #911C3C;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
