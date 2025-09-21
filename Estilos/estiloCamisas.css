@@ -1,0 +1,350 @@
+@charset "UTF-8";
+
+@media (max-width: 600px) {
+
+    main {
+        margin-top: 160px;
+    }
+
+    .linksNav a {
+        font-size: 10px;
+        padding: 3px 6px;
+    }
+
+    footer p {
+        font-size: 8px;
+        text-align: center;
+    }
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background-color: black;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: black;
+    box-sizing: border-box;
+    padding-bottom: 0;
+}
+
+nav hr:last-of-type {
+    margin-bottom: 0;
+}
+
+hr {
+    border: none;
+    height: 2px;
+    background-color: #911C3C;
+    margin: 7px auto;
+    width: 100%;
+}
+
+.logo {
+    text-align: center;
+}
+
+.logo a {
+    display: inline-block;
+}
+
+.logo img {
+    display: block;
+    max-width: 80px;
+    height: auto;
+}
+
+.linksNav {
+    display: flex;
+    justify-content: center; 
+    flex-wrap: nowrap;
+    gap: 10px;
+}
+
+.linksNav a {
+    font-family: monospace;
+    color: #911C3C;
+    font-size: clamp(10px, 3vw, 14px);
+    padding: 5px 8px;
+    border-radius: 5px;
+    text-decoration: underline;
+    white-space: nowrap;
+}
+
+main {
+    margin-top: 135px;
+    display: block;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.camisa {
+    display: flex;
+    align-items: flex-start;
+}
+
+.conjuntoCarrosel {
+    width: 75%;
+    overflow-x: auto;        
+    overflow-y: hidden;
+    white-space: nowrap;     
+    scrollbar-width: none;   
+}
+
+
+.conjuntoCarrosel::-webkit-scrollbar {
+    display: none;
+}
+
+.carrossel {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.carrossel img {
+    display: inline-block;
+    width: 600px;  
+    height: auto;
+    gap: 2px;
+}
+
+.descricao {
+    font-family: monospace;
+    margin: 15px 10px;
+    text-align: left;
+    color: #911C3C; 
+    line-height: 2.5;
+}
+
+.infoCamisa {
+    flex: 1;
+    color: #911C3C;
+    padding-left: 20px;
+}
+
+.infoCamisa h1 {
+    font-family: monospace;
+    margin-top: 10px;
+}
+
+.infoCamisa h2 {
+    font-family: monospace;
+    font-size: 24px;
+    margin: 20px 0px;
+}
+
+.infoCamisa p {
+    font-family: monospace;
+    font-size: 15px;
+}
+
+.tamanhos input,
+.cores input {
+    display: none;
+}
+
+.cores {
+    display: flex;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+.cores label {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block;
+    transition: 0.2s;
+}
+
+.cores input:checked + label {
+    border-color: #911C3C;
+}
+
+.tamanhos {
+    display: flex;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+.tamanhos label {
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #911C3C;
+    background: #000;
+    transition: 0.5s;
+}
+
+.tamanhos input:checked + label {
+    border-color: #911C3C;
+    background-color: #911c3b5b;
+}
+
+.finalizarCompra {
+    display: flex;
+    width: 100%;
+}
+
+/* Contador */
+.contador {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+}
+
+.contador button {
+  background: none;
+  border: none;
+  color: #911C3C; /* amarelo */
+  font-size: 20px;
+  padding: 8px 15px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.contador span {
+  flex: 1;
+  text-align: center;
+  font-size: 16px;
+  color: #911C3C;
+  font-weight: bold;
+}
+
+/* Botão comprar */
+.botaoComprar {
+  width: 70%; /* ocupa o resto da linha */
+  padding: 12px 20px;
+  background: #911C3C; /* amarelo */
+  color: #000;
+  border: none;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.botaoComprar:hover {
+  background: #911c3bdc; 
+}
+
+.camisas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    gap: 2px; 
+    overflow: hidden;
+}
+
+.camisaItem {
+    text-align: left; 
+    transition: transform 0.6s ease;
+    position: relative;
+}
+
+.camisaItem img {
+    width: 100%; 
+    height: auto;
+    transition: transform 0.6s ease;
+    display: block;
+}
+
+.linkCamisa {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+.imagemPrincipal {
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: transform 0.6s ease;
+}
+
+.imagemHover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transform: scale(1);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.linkCamisa:hover .imagemHover {
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+.linkCamisa:hover .imagemPrincipal {
+    transform: scale(1.05);
+}
+
+.produtosSimilares > p {
+    font-family: monospace;;
+    color: #911C3C;
+    text-align: center;
+    padding: 5px;
+    font-size: 20px;
+    font-weight: bold;
+
+}
+
+.camisaItem > h4 {
+    font-family: monospace;
+    color: #911C3C;
+    font-size: clamp(16px, 2vw, 20px);
+    margin: 10px 0px 6px 5px;
+}
+
+.camisaItem > p {
+    font-family: monospace;
+    color: #911C3C;
+    font-size: clamp(14px, 1.5vw, 18px);
+    margin-bottom: 15px;
+    margin-left: 5px;
+}
+
+footer hr {
+    border: none;
+    height: 2px;
+    background-color: #911C3C;
+    width: 100%;
+    margin: 5px 0;
+}
+
+footer {
+    color: #911C3C;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 10px 0px;
+}

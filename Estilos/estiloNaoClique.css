@@ -11,13 +11,6 @@
         padding: 3px 6px;
     }
 
-    #sloganMarca {
-        width: 100%;
-        height: auto;  
-        max-height: min(400px, 95vh);
-        object-fit: contain;
-    }
-
     footer p {
         font-size: 8px;
         text-align: center;
@@ -31,6 +24,8 @@
 
 body{
     background-color: black;
+    margin: 0;
+    padding: 0;
 }
 
 nav {
@@ -88,91 +83,33 @@ hr {
 }
 
 main {
-    display: flex;
+    margin-top: 135px;
+    display: block;
     flex-direction: column;
     width: 100%;
     height: 100%;
-    margin-bottom: 100px;
 }
 
-#sloganMarca{
-    width: 100%;
-    max-width: 1580px;
-    height: 923px;
-    display: block;
-    margin: 0 auto 20px auto;
-}
-
-h4 {
+h1 {
     font-family: monospace;
+    text-align: center;
     color: #911C3C;
-    font-size: clamp(16px, 2vw, 20px);
-    margin: 10px 0px 6px 5px;
+    padding: 10px 20px;
 }
-p {
+
+main > p {
     font-family: monospace;
+    text-align: center;
     color: #911C3C;
-    font-size: clamp(14px, 1.5vw, 18px);
-    margin-bottom: 15px;
-    margin-left: 5px;
+    padding: 10px 0px;
+    font-size:20px;
 }
 
-.camisas {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
-    gap: 2px; 
-    overflow: hidden;
-}
-
-.camisaItem {
-    text-align: left; 
-    transition: transform 0.6s ease;
-    position: relative;
-}
-
-.camisaItem img {
-    width: 100%; 
-    height: auto;
-    transition: transform 0.6s ease;
+.tenor-gif-embed {
     display: block;
-}
-
-.linkCamisa {
-    display: block;
-    position: relative;
-    width: 100%;
-    height: auto;
-    overflow: hidden;
-}
-
-.imagemPrincipal {
-    display: block;
-    width: 100%;
-    height: auto;
-    transition: transform 0.6s ease;
-}
-
-.imagemHover {
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0;
-    transform: scale(1);
-    transition: opacity 0.6s ease, transform 0.6s ease;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: 2;
-    pointer-events: none;
-}
-
-.linkCamisa:hover .imagemHover {
-    opacity: 1;
-    transform: scale(1.05);
-}
-
-.linkCamisa:hover .imagemPrincipal {
-    transform: scale(1.05);
+    margin: auto;
+    max-width: 640px;
+    max-height: 640px;
 }
 
 footer hr {
@@ -190,4 +127,5 @@ footer {
     align-items: center;
     justify-content: center;
     width: 100%;
+    margin: 10px 0px;
 }
